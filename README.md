@@ -1,3 +1,2 @@
-# Crash Notes
+# Initial page
 
-My own notes for starting off fast from specific topics.

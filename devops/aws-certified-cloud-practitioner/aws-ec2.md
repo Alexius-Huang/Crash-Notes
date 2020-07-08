@@ -60,7 +60,7 @@ Go to the AWS Management Console, target specific instance's security group, and
 
 * TCP protocol
 * Port 80
-* Source 0.0.0.0/0
+* Source 0.0.0.0/0 \(which means that anyone in the globe can access the website\)
 
 After that, you can successfully enter the URL in the browser via IP address.
 
@@ -73,4 +73,12 @@ cd /usr/share/nginx/html
 ```
 
 In this directory, you can modify the `index.html` page to change the webpage outlook.
+
+### Configure Firewall
+
+Since `0.0.0.0/0` can be accessed globally by anyone, we should change the `SSH` port 22's source into your own IP address.
+
+You should change `0.0.0.0\0` into `<your-ip>/32`.
+
+> Tips: Firewall can control both incoming \(inbound rules\) and outgoing \(**outbound rules**\) source; for instance, you can also let firewall to prevent server itself from accessing particular website.
 
